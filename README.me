@@ -1,0 +1,32 @@
+# Pointwise
+
+A billing and payment tracker for network-marketing consultants. Create draft estimates and bills for downlines, track points and part-payments month by month, and share each bill as a link with a UPI pay button.
+
+## Features
+- Consultants (downlines), each with a Consultant ID
+- Draft estimates that convert into real bills
+- Points entered per product, with monthly point totals that reset every month
+- Part-payments, with the unpaid balance carried into the next bill
+- Dashboard with a month picker, and a yearly report by consultant, then month, then orders
+- Shareable bill page with a UPI pay link, QR code and share button
+- Admin login (JWT); each downline can only see their own bill
+- Responsive layout that works on phones
+
+## Tech stack
+- **Backend:** Java 17, Spring Boot, Spring Data JPA, Spring Security + JWT, MySQL
+- **Frontend:** React (Vite), React Router, Axios
+
+## Run locally
+
+### Backend
+1. Create a MySQL database named `pointwise_db`.
+2. Create `backend/src/main/resources/application-local.properties` (it is git-ignored)
+
+3. Start the backend from the `backend` folder (port 8081).
+
+Optional: create `frontend/.env.local` with `VITE_UPI_ID` and `VITE_PAYEE_NAME` so the Pay button uses your UPI details.
+
+## Status
+Live demo coming soon.
+
+### Frontend
